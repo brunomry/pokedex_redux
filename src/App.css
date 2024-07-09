@@ -1,42 +1,78 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.bgColor{
+  background: #060B28;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.bannerHome{
+  width: 100%;
+  background:#cfe2ef;
+  background: #ECEFF4;
+  /* background: #EB6C6C; */
+  background: #060B28;
+  height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.bannerContent{
+  margin-top: 50px;
+  width: 100%;
+}
+
+.bannerDescription{
+  height: 250px;
+}
+
+.bannerContent .btnBanner{
+  width: 280px;
+  background: #d82912;
+  font-size: 20px;
+  color: #f7f7f7;
+}
+
+.bannerContent .btnBanner:hover{
+  background: #ff1e00aa;
+}
+
+.imgBanner{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+@media screen and (min-width:768px) {
+
+  
+  .bannerContent{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .imgBanner{
+    width: 90%;
+    height: 750px;
+    object-fit: cover;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (min-width:992px) { 
+ 
+  .bannerContent{
+    width: 100%;
+  }
+  
+  .imgBanner{
+    width: 550px;
+    height: 500px;
+    object-fit: cover;
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@media screen and (min-width:1200px) { 
+ 
+  .bannerContent{
+    width: 100%;
+  }
+  
+  .imgBanner{
+    width: 550px;
+    height: 750px;
+    object-fit: cover;
+  }
 }
