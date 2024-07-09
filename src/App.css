@@ -1,11 +1,10 @@
-.bgColor{
+.section{
   background: #060B28;
+  min-height: 100vh;
 }
 
 .bannerHome{
   width: 100%;
-  background:#cfe2ef;
-  background: #ECEFF4;
   /* background: #EB6C6C; */
   background: #060B28;
   height: 100vh;
@@ -37,8 +36,65 @@
   object-fit: cover;
 }
 
-@media screen and (min-width:768px) {
+.filtros{
+  background: #e5c10d;
+}
 
+.form input{
+  width: 400px;
+  background: #060B28;
+  background: #1733d31e;
+  border: 2px solid #0026ff;
+}
+
+input:focus{
+  outline: #1c2b84;
+  color: #fff;
+
+}
+
+.btnSearch{
+  background: rgb(246, 204, 96);
+
+}
+
+
+.btnSearch:hover{
+  
+  background: #ffbd15;
+}
+
+.containerFilters{
+  min-height: 500px;
+}
+
+/*card pokemon*/
+
+.imgPokemon{
+  width: 65%;
+  max-height: 12rem;
+  position: relative;
+  bottom: 30px;
+}
+
+.btnMoreDetails{
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: #06145c;
+  background: #057abd;
+  color: #fff;
+}
+
+@media screen and (min-width:768px) {
+  .cardPokemon{
+    background: #1733d31e;
+    border: 1px solid #02adfd;
+    width: 16rem;
+    min-height: 20rem;
+    cursor: pointer;
+    transition: .3s;
+  }
   
   .bannerContent{
     width: 100%;
@@ -48,6 +104,11 @@
     width: 90%;
     height: 750px;
     object-fit: cover;
+  }
+
+  .containerFilters{
+    position: sticky;
+    top: 50px;
   }
 }
 
@@ -61,6 +122,17 @@
     width: 550px;
     height: 500px;
     object-fit: cover;
+  }
+
+  .cardPokemon:hover{
+    border: 1px solid #02adfd;
+    transform: scale(1.05);
+    transition: .3s;
+  }
+
+  .cardPokemon:hover .btnMoreDetails{
+    background: #03a3ff;
+    color: #fff;
   }
 }
 
