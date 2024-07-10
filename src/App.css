@@ -41,7 +41,7 @@
 }
 
 .form input{
-  width: 400px;
+  width: 100%;
   background: #060B28;
   background: #1733d31e;
   border: 2px solid #0026ff;
@@ -58,17 +58,25 @@ input:focus{
 
 }
 
-
 .btnSearch:hover{
   
   background: #ffbd15;
 }
 
 .containerFilters{
-  min-height: 500px;
+  min-height: 200px;
 }
 
 /*card pokemon*/
+
+.cardPokemon{
+  background: #1733d31e;
+  border: 1px solid #02adfd;
+  width: 100%;
+  min-height: 18rem;
+  cursor: pointer;
+  transition: .3s;
+}
 
 .imgPokemon{
   width: 65%;
@@ -87,13 +95,8 @@ input:focus{
 }
 
 @media screen and (min-width:768px) {
-  .cardPokemon{
-    background: #1733d31e;
-    border: 1px solid #02adfd;
-    width: 16rem;
-    min-height: 20rem;
-    cursor: pointer;
-    transition: .3s;
+  .form input{
+    width: 400px;
   }
   
   .bannerContent{
@@ -128,6 +131,7 @@ input:focus{
     border: 1px solid #02adfd;
     transform: scale(1.05);
     transition: .3s;
+   
   }
 
   .cardPokemon:hover .btnMoreDetails{
@@ -147,4 +151,16 @@ input:focus{
     height: 750px;
     object-fit: cover;
   }
+
+  .cardPokemon{
+    width: 12.5rem;
+  }
+}
+ 
+
+@media screen and (min-width:1400px) { 
+  .cardPokemon{
+    width: 15rem;
+  }
+ 
 }

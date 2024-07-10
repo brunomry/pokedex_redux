@@ -16,11 +16,11 @@ const Pokemones = () => {
   return (
     <section className="container-fluid bg-color py-5 section text-center">
     <div className="container">
-    <div className="row gx-5">
+    <div className="row gx-md-3 gx-lg-5">
         <article>
         <img src={pokedex} alt="" className="img-fluid" width={200} />
         <h1 className="text-white mb-5">Encuentra tu pókemon</h1>
-        <form className="form container d-flex justify-content-center gap-3 px-2 px-md-5">
+        <form className="form container d-flex flex-column flex-sm-row justify-content-center gap-3 px-2 px-md-5">
           <div className="">
             <input
               className="rounded-3 py-3 ps-2 "
@@ -37,61 +37,61 @@ const Pokemones = () => {
           </button>
         </form>
         </article>
-        <article className=" col-md-2 mt-5 ">
+        <article className=" col-md-3 col-lg-2 mt-5 ">
           <div className="containerFilters">
           <h2 className="text-white ">Filtros</h2>
           <FormFiltros></FormFiltros>
           </div>
             
         </article>
-        <article className="col-md-10 mt-5">
-            <div className="row gy-5">
-              <article className="col-lg-3">
+        <article className="col-md-9 mt-5">
+            <div className="row gy-5 gx-3 gx-xxl-5">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
-              <article className="col-lg-3">
+              <article className="col-md-6 col-lg-4 col-xl-3">
               <ItemPokemon></ItemPokemon>
               </article>
             </div>
