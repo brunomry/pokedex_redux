@@ -41,12 +41,12 @@ const DetallePokemon = () => {
         <div className="mt-5">
           {status === "Cargando" && <p>Cargando...</p>}
           {status === "Exitoso" && pokemonObtenido && (
-            <Card className="cardDetailPokemon rounded-4 text-white d-flex flex-md-row gap-5 px-2  py-5">
+            <Card className="cardDetailPokemon rounded-4 text-white d-flex flex-md-row gap-4 px-2  py-3">
               <div className="imgDetailPokemon text-center d-flex flex-column  ">
                 <h3 className="fw-bold fs-1 mb-4 text-white">
                   {pokemonObtenido.name}
                 </h3>
-                <div className="imgDetailPokemon d-flex justify-content-center">
+                <div className="imgDetailPokemon d-flex justify-content-center mb-5">
                   <img
                     className=" "
                     src={
@@ -64,25 +64,26 @@ const DetallePokemon = () => {
                     </span>
                   ))}
                 </div>
+                <div className="d-flex justify-content-center gap-3 mt-3">
+                  <p className="p-2 rounded-2 bg-danger">Weight: {pokemonObtenido.weight}</p>
+                  <p className="p-2 rounded-2 bg-danger">Height: {pokemonObtenido.height}</p>
+                </div>
               </div>
 
  
-                <div className="mt-3">
+                <div className="mt-3 w-100">
                   <h4 className="mb-4">Habilidades</h4>
-                  <div className="mb-2 d-flex flex-column w-100">
+
                     {
                       pokemonObtenido.stats.map(stat=>(
-                        <div className="mb-2 w-100">
-                            <span className="mb-2">{stat.stat.name}: {stat.base_stat}</span>
-                            <div className="bg-white mt-2 w-100">a</div>
-                  </div>
+                        <div className="mb-2 row mx-2">
+                            <span className="mb-2 col-6">{stat.stat.name}: {stat.base_stat}</span>
+                            <div className="w-100 col-8 border px-0 py-1 rounded-2"><div className="bg-success py-1" style={{ width: stat.base_stat * 5 }}></div></div>
+                        </div>
                       ))
-                }
-                </div>
-                <div className="d-flex gap-3 mt-5">
-                  <p>Weight: {pokemonObtenido.weight}</p>
-                  <p>Height: {pokemonObtenido.height}</p>
-                </div>
+                  }
+           
+             
                 </div>
             </Card>
           )}
