@@ -150,6 +150,7 @@ input:focus{
 
   .cardDetailPokemon{
     width: 900px;
+    min-height: 500px;
     background: #1733d31e!important;
   }
 }
