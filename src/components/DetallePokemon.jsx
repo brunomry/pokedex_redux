@@ -41,7 +41,7 @@ const DetallePokemon = () => {
         <div className="mt-5">
           {status === "Cargando" && <p>Cargando...</p>}
           {status === "Exitoso" && pokemonObtenido && (
-            <Card className="cardDetailPokemon rounded-4 text-white d-flex flex-md-row gap-4 px-2  py-3">
+            <Card className="cardDetailPokemon rounded-4 text-white d-flex flex-md-row gap-2 px-2  py-5">
               <div className="imgDetailPokemon text-center d-flex flex-column  ">
                 <h3 className="fw-bold fs-1 mb-4 text-white">
                   {pokemonObtenido.name}
