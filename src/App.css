@@ -83,6 +83,7 @@ input:focus{
   max-height: 12rem;
   position: relative;
   bottom: 30px;
+  object-fit: cover;
 }
 
 .btnMoreDetails{
@@ -93,6 +94,13 @@ input:focus{
   background: #057abd;
   color: #fff;
 }
+
+.cardDetailPokemon{
+  width: 100%;
+  min-height: 400px;
+  background: #1733d31e!important;
+}
+
 
 @media screen and (min-width:768px) {
   .form input{
@@ -112,6 +120,18 @@ input:focus{
   .containerFilters{
     position: sticky;
     top: 50px;
+  }
+
+  .cardDetailPokemon{
+    width: 700px;
+    background: #1733d31e!important;
+    border: 1px solid #02adfd;
+  }
+
+  .imgDetailPokemon{
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
   }
 }
 
@@ -137,6 +157,11 @@ input:focus{
   .cardPokemon:hover .btnMoreDetails{
     background: #03a3ff;
     color: #fff;
+  }
+
+  .cardDetailPokemon{
+    width: 900px;
+    background: #1733d31e!important;
   }
 }
 
