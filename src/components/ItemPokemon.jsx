@@ -1,12 +1,10 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import poke from "../assets/pokemon.png";
 import { useSelector } from "react-redux";
-import { tipos } from "../helpers/tipos";
 
 const ItemPokemon = ({ p }) => {
-  const pokemones = useSelector((state) => state.pokemones.pokemones);
+
 
   return (
     <Card className="d-block cardPokemon rounded-4 text-white d-flex flex-column gap-2 align-items-center">
@@ -24,7 +22,7 @@ const ItemPokemon = ({ p }) => {
       </div>
       <Link
         className="py-3 w-100 fw-medium btnMoreDetails text-decoration-none rounded-bottom-4 border-0"
-        to={`/pokemon/${p.id}`}
+        to={`/pokemon/${p.name}`}
       >
         {" "}
         Más detalles

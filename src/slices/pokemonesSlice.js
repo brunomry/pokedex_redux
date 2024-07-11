@@ -3,9 +3,8 @@ import axios from "axios";
 
 const initialState = {
   pokemones: [],
-  status: null,
+  status: "idle",
   error: null,
-  pokemon: {},
   tipos: [],
 };
 

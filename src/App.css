@@ -53,16 +53,6 @@ input:focus{
 
 }
 
-.btnSearch{
-  background: rgb(246, 204, 96);
-
-}
-
-.btnSearch:hover{
-  
-  background: #ffbd15;
-}
-
 .containerFilters{
   min-height: 200px;
 }
@@ -130,7 +120,7 @@ input:focus{
 
   .imgDetailPokemon{
     width: 250px;
-    height: 350px;
+    height: 250px;
     object-fit: cover;
   }
 }
