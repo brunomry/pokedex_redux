@@ -73,17 +73,17 @@ input:focus{
   background: #1733d31e;
   border: 1px solid #02adfd;
   width: 100%;
-  min-height: 18rem;
+  min-height: 16rem;
   cursor: pointer;
   transition: .3s;
 }
 
 .imgPokemon{
-  width: 65%;
-  max-height: 12rem;
+  width: 150px;
+  height: 150px;
   position: relative;
   bottom: 30px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .btnMoreDetails{
@@ -151,7 +151,6 @@ input:focus{
     border: 1px solid #02adfd;
     transform: scale(1.05);
     transition: .3s;
-   
   }
 
   .cardPokemon:hover .btnMoreDetails{

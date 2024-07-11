@@ -1,65 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useDispatch, useSelector } from "react-redux";
+import { obtenerTipos } from "../slices/pokemonesSlice";
 
 const FormFiltros = () => {
+  const tipos = useSelector((state) => state.pokemones.tipos);
+  const status = useSelector((state) => state.pokemones.status);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(obtenerTipos());
+  }, []);
+
   return (
-    <Form className="mt-3 filtros d-flex flex-wrap align-items-center justify-content-center gap-2  rounded-3 py-3">
-     
-      <Form.Group className="mb-2 d-flex justify-content-md-center " controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
-      <Form.Group className="mb-2 d-flex justify-content-center" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="water" className=""/>
-      </Form.Group>
+    <Form className="mt-3 filtros row  rounded-3 py-3">
+      {status === "Exitoso" &&
+        tipos.results.map((tipo) => (
+          <Form.Group
+            key={tipo.name}
+            className="mb-2 d-flex col-4 col-sm-3 col-md-6 col-lg-5"
+            controlId="formBasicCheckbox"
+          >
+            <Form.Check type="checkbox" label={tipo.name} className="" />
+          </Form.Group>
+        ))}
     </Form>
   );
 };

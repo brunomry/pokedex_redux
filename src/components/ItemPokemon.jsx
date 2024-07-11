@@ -1,28 +1,35 @@
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import React from "react";
 import Card from "react-bootstrap/Card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import poke from "../assets/pokemon.png";
+import { useSelector } from "react-redux";
+import { tipos } from "../helpers/tipos";
 
-const ItemPokemon = ({pokemon}) => {
+const ItemPokemon = ({ p }) => {
+  const pokemones = useSelector((state) => state.pokemones.pokemones);
 
   return (
-      <Card className="d-block cardPokemon rounded-4 text-white d-flex flex-column gap-2 align-items-center" >
-        <Card.Img className="imgPokemon" src={poke} />
+    <Card className="d-block cardPokemon rounded-4 text-white d-flex flex-column gap-2 align-items-center">
+      <img className="imgPokemon img-fluid" src={p.sprites.other.dream_world.front_default} />
 
-        <div className="mb-3">
-          <h3 className="fw-bold fs-4 mb-4">Pikachu</h3>
-          <span className="py-1 px-4 rounded-2 border bg-info me-2">Water</span>
-          <span className="py-1 px-4 rounded-2 border bg-info">Water</span>
+      <div className="mb-3">
+        <h3 className="fw-bold fs-3 mb-4 text-primary">{p.name}</h3>
+        <div className="d-flex gap-2 justify-content-center align-items-center">
+          {p.types.map((t) => (
+            <span className={` rounded-2 px-3 bg-warning text-dark py-2 `}>
+              {t.type.name}
+            </span>
+          ))}
         </div>
-        <Link
-          className="py-3 w-100 fw-medium btnMoreDetails text-decoration-none rounded-bottom-4 border-0"
-          to={`/pokemon/:id`}
-        >
-          {" "}
-          Más detalles
-        </Link>
-      </Card>
+      </div>
+      <Link
+        className="py-3 w-100 fw-medium btnMoreDetails text-decoration-none rounded-bottom-4 border-0"
+        to={`/pokemon/${p.id}`}
+      >
+        {" "}
+        Más detalles
+      </Link>
+    </Card>
   );
 };
 
